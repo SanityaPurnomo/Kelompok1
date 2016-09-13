@@ -1,0 +1,50 @@
+  203  clear
+  204  cd ..
+  205  ls
+  206  cd 26415172
+  207  ls
+  208  cs ..
+  209  cd ..
+  210  ;s
+  211  ls
+  212  git clone https://github.com/SanityaPurnomo/Kelompok1
+  213  ls- al
+  214  ls -al
+  215  ssh-keygen -t rsa -b 4096 -C "m26415172@john.petra.ac.id"
+  216  cat ~/.ssh/id_rsa.pub
+  217  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCV0yTYA77HtqYAckwIGkJQyq6fWXbfE/Gw/ui1x8Zf7dFQrmptn7iMQKybzYPNnHd2FWnJ1hrj8xdZUIDkIdwe4P44DP9F7dhxQS0/qBF4GJV4qHkaoD8iVOBCMwB0fR8dP06u3YxkXJeBvADDmTP8PMHWXIhCbRNPhuo1z1hu8fJWpxtLCkObwrhmuGepPrIWX0Y2OmN2lIGs3gUi1Rp2kCOjQHKjM//XAaTegZEuenSU9kvaPzXmWUylLc4qpW9kAKrbplgav/bjcdth1q3fLFtPtO3oVj7oB1bVXUwYMhGfLRXoMjo3IuozyLP744yOxBrIz3xbppIBSEyH2Tq2Xqs8C7qFx59oXMFrkUxbmjLG83vR28hsE6DsoS7L2USCzsN2dwpm6o0VX9RJ++Nnita312NeVgtkZflfvemGGMBQoa/7HUY9V68GzQf/dCwwZx/eIur+8SzCruu+1GOxgflSE/ZgtEzLLoXRMckcUYmlgHEGK9KCgMO5JAeYnH8iaqXAbKz8aEwjTtlJcO8tIh5jzvUBWN8khB81nBK0lRIFD4ucN+zdaWwsIcumjCTq4pA/IiEFDTU+0gpayVjlxvS1v2AkFeKTCjFU4Gr1BXI41fI+QOVnoSuhqyz1ZL+wUGRchG+SvNN6Rx1i1bMgjpPspbq1XuxgbECFFSQzaw== m26415172@john.petra.ac.id
+  218  ssh-keygen -t rsa -b 4096 -C "m26415005@john.petra.ac.id"
+  219  cat ~/.ssh/id_rsa.pub
+  220  git remote -v
+  221  ls
+  222  cd Kelompok1
+  223  git remote -v
+  224  git remote set-url origin https://git@github.com:SanityaPurnomo/Kelompok1.git
+  225  git remote -v
+  226  git status
+  227  touch history1_130916.txt
+  228  nano history1_130916.txt 
+  229  git add .
+  230  git commit
+  231  git commit -m "coba ssh key"
+  232  git push
+  233  exit
+  234  ls
+  235  ls -la
+  236  git remote -v
+  237  cd 26415172
+  238  git remote -v
+  239  cd ..
+  240  ls
+  241  cd Kelompok1
+  242  git remote -v
+  243  ls
+  244  git status
+  245  git push
+  246  git remote set-url origin git@github.com:SanityaPurnomo/Kelompok1.git
+  247  git remote -v
+  248  ls
+  249  cat history1.130916.txt
+  250  nano history_130916.txt
+  251  history
+  252  history 50 > history_130916.txt
