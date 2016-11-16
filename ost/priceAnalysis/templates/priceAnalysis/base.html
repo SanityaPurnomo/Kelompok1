@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Price Analysis{% endblock %}</title>
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'priceAnalysis/style.css' %}" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootsrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{% url 'priceAnalysis:index' %}">PriceAnalysis</a>
+      </div>
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class={% block index_active %}{% endblock %}>
+            <a href="{% url 'priceAnalysis:index' %}">
+              <span class="glyphicon glyphicon-signal"aria-hidden="true">
+              </span>&nbsp;Charts
+            </a>
+          </li>
+          <li class={% block list_active %}{% endblock %}>
+            <a href="{% url 'priceAnalysis:list' %}">
+              <span class="glyphicon glyphicon-list-alt"aria-hidden="true">
+              </span>&nbsp;Database
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+{% block body %}
+{% endblock %}
+</body>
+</html>
