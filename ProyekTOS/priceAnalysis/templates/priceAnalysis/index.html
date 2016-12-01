@@ -1,0 +1,60 @@
+{% extends 'priceAnalysis/base.html' %}
+{% block title %}
+  Price Analysis
+{% endblock %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.3.min.css" type="text/css" />
+    <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.3.min.js"></script>
+
+    {{the_script|safe}}
+
+{% endblock %}
+{% block index_active %}active{% endblock %}
+{% block body %}
+<form class="form-horizontal stats-form" role="form" action="" method="post" id="form-statistik">
+  {% csrf_token %}
+  <label for="" class="col-md-2 col-sm-3 col-xs-6 control-label">
+    <h4>&nbsp;&nbsp;Perkembangan Harga</h4></label>
+  <div class="col-md-2 col-sm-3 col-xs-6">
+    <select class="form-control" name="cabe">
+      <option value="1" {% if jenis == 1 %} selected {% endif %}>Cabe Merah Keriting</option>
+    	<option value="2" {% if jenis == 2 %} selected {% endif %}>Cabe Merah Besar</option>
+    </select>
+  </div>
+  <div class="col-md-2 col-sm-3 col-xs-6">
+    <select class="form-control" name="m">
+      <option value="1" {% if mon == 1 %} selected {% endif %}>Januari</option>
+    	<option value="2" {% if mon == 2 %} selected {% endif %}>Februari</option>
+    	<option value="3" {% if mon == 3 %} selected {% endif %}>Maret</option>
+    	<option value="4" {% if mon == 4 %} selected {% endif %}>April</option>
+    	<option value="5" {% if mon == 5 %} selected {% endif %}>Mei</option>
+    	<option value="6" {% if mon == 6 %} selected {% endif %}>Juni</option>
+    	<option value="7" {% if mon == 7 %} selected {% endif %}>Juli</option>
+    	<option value="8" {% if mon == 8 %} selected {% endif %}>Agustus</option>
+    	<option value="9" {% if mon == 9 %} selected {% endif %}>September</option>
+    	<option value="10" {% if mon == 10 %} selected {% endif %}>Oktober</option>
+    	<option value="11" {% if mon == 11 %} selected {% endif %}>November</option>
+    	<option value="12" {% if mon == 12 %} selected {% endif %}>Desember</option>
+    </select>
+  </div>
+  <div class="col-md-1 col-sm-2 col-xs-4">
+    <select class="form-control" name="y">
+      <option value="2013" {% if year == 2013 %} selected {% endif %}>2013</option>
+    	<option value="2014" {% if year == 2014 %} selected {% endif %}>2014</option>
+    	<option value="2015" {% if year == 2015 %} selected {% endif %}>2015</option>
+    	<option value="2016" {% if year == 2016 %} selected {% endif %}>2016</option>
+    </select>
+  </div>
+  <div class="col-md-2 col-sm-3 col-xs-6">
+    <button type="submit" class="btn btn-primary" name="sbmit" value="Submit">Check</button>
+  </div>
+</form>
+  <div class="col-md-12 col-sm-9 col-xs-6">
+      {{the_div|safe}}
+  </div>
+  <div class="col-md-12 col-sm-9 col-xs-6">
+    <h3>Perkiraan Harga Selanjutnya : {{ last }}</h3>
+  </div>
+{% endblock %}

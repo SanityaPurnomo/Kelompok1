@@ -1,0 +1,21 @@
+{% extends 'priceAnalysis/base.html' %}
+{% block title %}
+  Price Analysis - Data
+{% endblock %}
+{% block list_active %}active{% endblock %}
+{% block body %}
+  {% if all_cabe %}
+    <h3>Pilihan Cabe : </h3>
+  <ul>
+    {% for cabe in all_cabe %}
+    <li><a href="{% url 'priceAnalysis:detail' cabe.id %}">{{ cabe.name }}</a></li>
+    {% endfor %}
+  <br>
+  </ul>
+  &nbsp;&nbsp;
+  <button type="submit" class="btn btn-success" name="renew">
+    Renew Data Cabe</button>
+  {% else %}
+    <h1>You don't have any data</h1>
+  {% endif %}
+{% endblock %}
